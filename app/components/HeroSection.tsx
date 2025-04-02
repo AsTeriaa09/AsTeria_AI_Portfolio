@@ -1,23 +1,23 @@
-"use client"
+"use client";
 
-import { useRef, useEffect, useState } from "react"
-import { motion, useScroll, useTransform } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Code, Sparkles, Layers } from "lucide-react"
-import Link from "next/link"
-import SplitText from "@/components/split-text"
+import { useRef, useEffect, useState } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Code, Sparkles, Layers } from "lucide-react";
+import Link from "next/link";
+import SplitText from "@/components/split-text";
 
 export default function Hero() {
-  const containerRef = useRef<HTMLElement>(null)
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const containerRef = useRef<HTMLElement>(null);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end start"],
-  })
+  });
 
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"])
-  const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0])
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+  const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   // Mouse parallax effect
   useEffect(() => {
@@ -25,16 +25,24 @@ export default function Hero() {
       setMousePosition({
         x: e.clientX / window.innerWidth,
         y: e.clientY / window.innerHeight,
-      })
-    }
+      });
+    };
 
-    window.addEventListener("mousemove", handleMouseMove)
-    return () => window.removeEventListener("mousemove", handleMouseMove)
-  }, [])
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
 
-  const moveX = useTransform(scrollYProgress, [0, 1], [mousePosition.x * 20, mousePosition.x * -20])
+  const moveX = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [mousePosition.x * 20, mousePosition.x * -20]
+  );
 
-  const moveY = useTransform(scrollYProgress, [0, 1], [mousePosition.y * 20, mousePosition.y * -20])
+  const moveY = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [mousePosition.y * 20, mousePosition.y * -20]
+  );
 
   return (
     <section
@@ -71,7 +79,10 @@ export default function Hero() {
         }}
       />
 
-      <motion.div style={{ y, opacity }} className="container mx-auto px-4 pt-20">
+      <motion.div
+        style={{ y, opacity }}
+        className="container mx-auto px-4 pt-20"
+      >
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
@@ -93,21 +104,28 @@ export default function Hero() {
                 </motion.span>
               </motion.div>
 
-              <div className="">
-                {/* <SplitText
-                  text="Crafting digital experiences that merge form and function."
-                  tag="h1"
-                  className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-tight"
-                /> */}
+              <div className="mb-6">
+                <div className="text-4xl md:text-6xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight">
+                I'm Sultana Rupa
+                 </div>
+
+                {/* <span className="text-2xl md:text-4xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight">
+                  I'm Sultana Rupa,
+                </span> */}
 
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.6, duration: 0.5 }}
-                  className="text-xl md:text-2xl text-muted-foreground max-w-2xl"
+                  className="text-xl md:text-lg text-muted-foreground max-w-3xl "
                 >
-                  I'm Sultana Rupa, a developer focused on building modern, intuitive interfaces and robust
-                  applications.
+                  a developer focused on building modern, intuitive interfaces
+                  and robust applications. With 4+ years of experience
+                  transforming ideas into elegant, functional applications.
+                  Specializing in{" "}
+                  <span className="text-primary/90">Next.js</span>,{" "}
+                  <span className="text-primary/90">React</span>, and{" "}
+                  <span className="text-primary/90">AI integration</span>.
                 </motion.p>
               </div>
 
@@ -148,7 +166,11 @@ export default function Hero() {
                   transition={{ type: "spring", stiffness: 400, damping: 10 }}
                 >
                   <Button asChild variant="outline">
-                    <a href="https://github.com/AsTeriaa09" target="_blank" rel="noopener noreferrer">
+                    <a
+                      href="https://github.com/AsTeriaa09"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       GitHub
                     </a>
                   </Button>
@@ -172,9 +194,18 @@ export default function Hero() {
                 transition={{ type: "spring", stiffness: 300, damping: 15 }}
               >
                 <div className="flex space-x-2 mb-4">
-                  <motion.div className="w-3 h-3 rounded-full bg-red-500" whileHover={{ scale: 1.2 }} />
-                  <motion.div className="w-3 h-3 rounded-full bg-yellow-500" whileHover={{ scale: 1.2 }} />
-                  <motion.div className="w-3 h-3 rounded-full bg-green-500" whileHover={{ scale: 1.2 }} />
+                  <motion.div
+                    className="w-3 h-3 rounded-full bg-red-500"
+                    whileHover={{ scale: 1.2 }}
+                  />
+                  <motion.div
+                    className="w-3 h-3 rounded-full bg-yellow-500"
+                    whileHover={{ scale: 1.2 }}
+                  />
+                  <motion.div
+                    className="w-3 h-3 rounded-full bg-green-500"
+                    whileHover={{ scale: 1.2 }}
+                  />
                 </div>
 
                 <div className="font-mono text-sm">
@@ -192,7 +223,8 @@ export default function Hero() {
                     transition={{ delay: 0.8 }}
                     className="pl-4"
                   >
-                    name: <span className="text-green-500">"Sultana Rupa"</span>,
+                    name: <span className="text-green-500">"Sultana Rupa"</span>
+                    ,
                   </motion.div>
                   <motion.div
                     initial={{ opacity: 0 }}
@@ -200,7 +232,11 @@ export default function Hero() {
                     transition={{ delay: 0.9 }}
                     className="pl-4"
                   >
-                    title: <span className="text-green-500">"Full Stack Developer"</span>,
+                    title:{" "}
+                    <span className="text-green-500">
+                      "Full Stack Developer"
+                    </span>
+                    ,
                   </motion.div>
                   <motion.div
                     initial={{ opacity: 0 }}
@@ -209,8 +245,8 @@ export default function Hero() {
                     className="pl-4"
                   >
                     skills: [<span className="text-yellow-500">"Next.js"</span>,{" "}
-                    <span className="text-yellow-500">"React"</span>, <span className="text-yellow-500">"Node.js"</span>
-                    , ...],
+                    <span className="text-yellow-500">"React"</span>,{" "}
+                    <span className="text-yellow-500">"Node.js"</span>, ...],
                   </motion.div>
                   <motion.div
                     initial={{ opacity: 0 }}
@@ -234,7 +270,11 @@ export default function Hero() {
                     transition={{ delay: 1.3 }}
                     className="pl-4"
                   >
-                    passion: <span className="text-green-500">"Creating elegant solutions"</span>,
+                    passion:{" "}
+                    <span className="text-green-500">
+                      "Creating elegant solutions"
+                    </span>
+                    ,
                   </motion.div>
                   <motion.div
                     initial={{ opacity: 0 }}
@@ -255,7 +295,10 @@ export default function Hero() {
                   <motion.span
                     className="text-primary"
                     animate={{ opacity: [1, 0, 1] }}
-                    transition={{ duration: 1, repeat: Number.POSITIVE_INFINITY }}
+                    transition={{
+                      duration: 1,
+                      repeat: Number.POSITIVE_INFINITY,
+                    }}
                   >
                     _
                   </motion.span>
@@ -357,6 +400,5 @@ export default function Hero() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }
-

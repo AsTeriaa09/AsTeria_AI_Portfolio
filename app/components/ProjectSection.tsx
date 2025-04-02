@@ -5,14 +5,16 @@ import { motion, useScroll, useTransform } from "framer-motion"
 import Image from "next/image"
 import { ArrowUpRight } from "lucide-react"
 import SplitText from "@/components/split-text"
+import dash from "@/public/dash.png"
+import dash2 from "@/public/Dashboard.png"
 
 const projects = [
   {
     id: 1,
     title: "NeoCampus",
     description: "All-in-one student app providing campus services and information in real-time.",
-    image: "/placeholder.svg?height=600&width=800",
-    technologies: ["Next.js", "React", "MongoDB", "Socket.IO"],
+    image: dash,
+    technologies: ["Next.js", "React", "MongoDB", "Socket.IO","AI Integration"],
     link: "#",
     color: "bg-[#6366F1]",
   },
@@ -20,7 +22,7 @@ const projects = [
     id: 2,
     title: "NeoHire",
     description: "AI-powered platform to help job seekers improve their professional profiles.",
-    image: "/placeholder.svg?height=600&width=800",
+    image: dash2,
     technologies: ["Next.js", "React", "MongoDB", "AI Integration"],
     link: "#",
     color: "bg-[#8B5CF6]",
@@ -34,33 +36,7 @@ const projects = [
     link: "#",
     color: "bg-[#EC4899]",
   },
-  {
-    id: 4,
-    title: "CodeCollab",
-    description: "Collaborative coding platform with real-time code sharing and execution.",
-    image: "/placeholder.svg?height=600&width=800",
-    technologies: ["React", "WebSockets", "Monaco Editor", "Node.js"],
-    link: "#",
-    color: "bg-[#10B981]",
-  },
-  {
-    id: 5,
-    title: "PixelPerfect",
-    description: "AI-powered image editing tool with advanced filters and transformations.",
-    image: "/placeholder.svg?height=600&width=800",
-    technologies: ["React", "TensorFlow.js", "WebGL", "Canvas API"],
-    link: "#",
-    color: "bg-[#F59E0B]",
-  },
-  {
-    id: 6,
-    title: "DataVizPro",
-    description: "Interactive data visualization dashboard with customizable charts and graphs.",
-    image: "/placeholder.svg?height=600&width=800",
-    technologies: ["React", "D3.js", "GraphQL", "PostgreSQL"],
-    link: "#",
-    color: "bg-[#3B82F6]",
-  },
+  
 ]
 
 export default function WorkSection() {
@@ -221,7 +197,7 @@ function ProjectItem({ project, index }: ProjectItemProps) {
           transition={{ duration: 0.5 }}
         >
           <motion.div
-            className="relative overflow-hidden rounded-lg h-48 md:h-64"
+            className="relative overflow-hidden rounded-lg h-48 md:h-72"
             whileHover={{ scale: 1.03 }}
             transition={{ type: "spring", stiffness: 300, damping: 10 }}
             onHoverStart={() => setIsHovered(true)}
