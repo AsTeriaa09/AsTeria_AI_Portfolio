@@ -12,14 +12,22 @@ export default function Navigation() {
   const [scrolled, setScrolled] = useState(false)
 
   const menuItems = [
-    { name: "Home", href: "#home" },
-    { name: "Work", href: "#work" },
-    { name: "About", href: "#about" },
-    { name: "Chat", href: "#chat" },
+    { name: "Home", href: "/" },
+    { name: "Projects", href: "#work" },
+    { name: "Skills", href: "#about" },
+    { name: "AI Assistant", href: "#chat" },
     { name: "Contact", href: "#contact" },
   ]
 
   useEffect(() => {
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+  
+    
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 0);
     const handleScroll = () => {
       setScrolled(window.scrollY > 50)
 
@@ -45,11 +53,8 @@ export default function Navigation() {
   return (
     <>
       <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? "py-3" : "py-5"}`}>
-        <div className="container mx-auto px-4 flex justify-between items-center">
-          <Link href="/" className="text-xl font-medium tracking-tight">
-            <span className="text-primary">S</span>ultana
-          </Link>
-
+        <div className="container mx-auto px-4 flex justify-center items-center">
+         
           <div className="hidden md:flex items-center space-x-8">
             {menuItems.map((item, i) => (
               <motion.div
@@ -100,7 +105,7 @@ export default function Navigation() {
             transition={{ duration: 0.2 }}
             className="fixed inset-0 bg-background z-50 flex flex-col"
           >
-            <div className="container mx-auto px-4 py-5 flex justify-between items-center">
+            <div className="container mx-auto px-4 py-5 flex justify-center items-center">
               <Link href="/" className="text-xl font-medium tracking-tight">
                 <span className="text-primary">S</span>ultana
               </Link>

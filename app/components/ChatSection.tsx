@@ -106,7 +106,7 @@ export default function ChatSection() {
 
       <motion.div style={{ opacity, y }} className="container mx-auto px-4">
         <div className="mb-16 md:mb-24">
-          <SplitText text="Chat with My AI" tag="h2" className="text-3xl md:text-5xl font-bold mb-6" />
+          <SplitText text="Chat with Rupa Bot" tag="h2" className="text-3xl md:text-5xl font-bold mb-6" />
           <p className="text-muted-foreground max-w-2xl">
             Have questions about my skills, experience, or projects? My AI assistant is here to help!
           </p>
@@ -119,7 +119,7 @@ export default function ChatSection() {
                 <div className="p-1 rounded-full bg-primary/20 text-primary">
                   <Bot className="h-4 w-4" />
                 </div>
-                <span className="font-medium">Rupa's AI Assistant</span>
+                <span className="font-medium">Rupa Bot</span>
               </div>
             </div>
 
