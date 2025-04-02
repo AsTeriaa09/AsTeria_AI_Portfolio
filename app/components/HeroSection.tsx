@@ -83,8 +83,8 @@ export default function Hero() {
         style={{ y, opacity }}
         className="container mx-auto px-4 pt-20"
       >
-        <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-[11vw] items-center">
             <div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -109,10 +109,7 @@ export default function Hero() {
                 I'm Sultana Rupa
                  </div>
 
-                {/* <span className="text-2xl md:text-4xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight">
-                  I'm Sultana Rupa,
-                </span> */}
-
+               
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}

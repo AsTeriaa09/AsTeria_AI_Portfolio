@@ -7,6 +7,7 @@ import { ArrowUpRight } from "lucide-react"
 import SplitText from "@/components/split-text"
 import dash from "@/public/dash.png"
 import dash2 from "@/public/Dashboard.png"
+import dash3 from "@/public/dash3.jpg"
 
 const projects = [
   {
@@ -15,7 +16,7 @@ const projects = [
     description: "All-in-one student app providing campus services and information in real-time.",
     image: dash,
     technologies: ["Next.js", "React", "MongoDB", "Socket.IO","AI Integration"],
-    link: "#",
+    link: "https://github.com/AsTeriaa09/NeoCampus",
     color: "bg-[#6366F1]",
   },
   {
@@ -24,16 +25,16 @@ const projects = [
     description: "AI-powered platform to help job seekers improve their professional profiles.",
     image: dash2,
     technologies: ["Next.js", "React", "MongoDB", "AI Integration"],
-    link: "#",
+    link: "https://github.com/AsTeriaa09/NeoHire",
     color: "bg-[#8B5CF6]",
   },
   {
     id: 3,
     title: "ChatterBox",
     description: "Real-time communication platform for seamless messaging experience.",
-    image: "/placeholder.svg?height=600&width=800",
-    technologies: ["MongoDB", "Express.js", "React", "Socket.IO"],
-    link: "#",
+    image: dash3,
+    technologies: ["MongoDB","Node.js", "Express.js", "React", "Socket.IO"],
+    link: "https://github.com/AsTeriaa09/mern_socket_chat_app",
     color: "bg-[#EC4899]",
   },
   
@@ -197,7 +198,7 @@ function ProjectItem({ project, index }: ProjectItemProps) {
           transition={{ duration: 0.5 }}
         >
           <motion.div
-            className="relative overflow-hidden rounded-lg h-48 md:h-72"
+            className="relative overflow-hidden rounded-lg h-48 md:h-72 md:w-88"
             whileHover={{ scale: 1.03 }}
             transition={{ type: "spring", stiffness: 300, damping: 10 }}
             onHoverStart={() => setIsHovered(true)}
