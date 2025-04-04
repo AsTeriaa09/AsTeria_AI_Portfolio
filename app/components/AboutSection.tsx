@@ -18,8 +18,12 @@ const skills = [
       "Next.js",
       "HTML5",
       "CSS3",
+      "C",
+      "C++",
+      "Java",
       "TanStack Query",
       "Redux",
+      "Socket.io"
     ],
   },
   {
@@ -28,8 +32,10 @@ const skills = [
     items: [
       "Bootstrap",
       "Tailwind CSS",
+      "Framer Motion",
       "Materialize CSS",
       "Responsive Web Design",
+      
     ],
   },
   {
@@ -41,8 +47,10 @@ const skills = [
       "MySQL",
       "PostgreSQL",
       "Langchain",
+      "Docker",
       "Postman",
-      "Vercel",
+      "Vercel",     
+      
       "Webpack",
       "npm",
       "Vector Database",

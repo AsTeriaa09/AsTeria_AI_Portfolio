@@ -83,7 +83,6 @@ export default function ContactSection() {
 
         <div className="grid md:grid-cols-2 gap-8 md:gap-16">
           <div>
-            <h3 className="text-xl font-semibold mb-6">Contact Information</h3>
 
             <div className="space-y-6 mb-8">
               <div>
@@ -105,6 +104,18 @@ export default function ContactSection() {
                   className="text-lg hover:text-primary transition-colors flex items-center"
                 >
                   github.com/AsTeriaa09
+                  <ArrowUpRight className="ml-1 h-4 w-4" />
+                </a>
+              </div>
+              <div>
+                <p className="text-sm text-muted-foreground mb-1">LinkedIn</p>
+                <a
+                  href="https://www.linkedin.com/in/sultana-rupa-3662a3318/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-lg hover:text-primary transition-colors flex items-center"
+                >
+                  linkedin.com/sultana-rupa
                   <ArrowUpRight className="ml-1 h-4 w-4" />
                 </a>
               </div>

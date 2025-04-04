@@ -104,7 +104,7 @@ export default function Hero() {
 
               <div className="mb-6">
                 <div className="text-4xl md:text-6xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight">
-                I&apos;m Sultana Rupa
+                  I&apos;m Sultana Rupa
                 </div>
 
                 <motion.p
@@ -135,7 +135,12 @@ export default function Hero() {
                   transition={{ type: "spring", stiffness: 400, damping: 10 }}
                 >
                   <Button asChild className="group relative overflow-hidden">
-                    <Link href="#work">
+                    <a
+                      href="https://github.com/AsTeriaa09"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center"
+                    >
                       Explore my work
                       <motion.span
                         className="ml-2 inline-block"
@@ -150,7 +155,7 @@ export default function Hero() {
                       >
                         <ArrowRight className="h-4 w-4" />
                       </motion.span>
-                    </Link>
+                    </a>
                   </Button>
                 </motion.div>
 
@@ -161,11 +166,11 @@ export default function Hero() {
                 >
                   <Button asChild variant="outline">
                     <a
-                      href="https://github.com/AsTeriaa09"
+                      href="https://www.linkedin.com/in/sultana-rupa-3662a3318/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      GitHub
+                      LinkedIn
                     </a>
                   </Button>
                 </motion.div>
@@ -217,7 +222,11 @@ export default function Hero() {
                     transition={{ delay: 0.8 }}
                     className="pl-4"
                   >
-                    name: <span className="text-green-500">&quot;Sultana Rupa&quot;</span>,
+                    name:{" "}
+                    <span className="text-green-500">
+                      &quot;Sultana Rupa&quot;
+                    </span>
+                    ,
                   </motion.div>
                   <motion.div
                     initial={{ opacity: 0 }}
@@ -227,7 +236,7 @@ export default function Hero() {
                   >
                     title:{" "}
                     <span className="text-green-500">
-                    &quot;Full Stack Developer&quot;
+                      &quot;Full Stack Developer&quot;
                     </span>
                     ,
                   </motion.div>
