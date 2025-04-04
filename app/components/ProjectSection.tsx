@@ -90,10 +90,7 @@ function ProjectItem({ project, index }: ProjectItemProps) {
   const itemRef = useRef<HTMLDivElement>(null)
   const [isHovered, setIsHovered] = useState(false)
 
-  const { scrollYProgress } = useScroll({
-    target: itemRef,
-    offset: ["start end", "end start"],
-  })
+  
 
 
 
