@@ -5,8 +5,6 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Code, Sparkles, Layers } from "lucide-react";
 import Link from "next/link";
-import SplitText from "@/components/split-text";
-
 export default function Hero() {
   const containerRef = useRef<HTMLElement>(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });

@@ -54,8 +54,8 @@ export default function WorkSection() {
     <section id="work" ref={containerRef} className="py-20 md:py-32 relative">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(var(--primary-rgb),0.1),transparent_70%)]" />
 
-      <motion.div style={{ opacity, y }} className="container mx-auto px-4">
-        <div className="mb-16 md:mb-24">
+      <motion.div style={{ opacity: opacity, y: y }} className="container mx-auto px-4">
+      <div className="mb-16 md:mb-24">
           <SplitText text="Selected Work" tag="h2" className="text-3xl md:text-5xl font-bold mb-6" />
           <p className="text-muted-foreground max-w-2xl">
             A curated selection of projects that showcase my skills in building modern, user-focused applications with
