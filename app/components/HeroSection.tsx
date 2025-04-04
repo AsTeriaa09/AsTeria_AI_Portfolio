@@ -104,10 +104,9 @@ export default function Hero() {
 
               <div className="mb-6">
                 <div className="text-4xl md:text-6xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight">
-                I'm Sultana Rupa
-                 </div>
+                I&apos;m Sultana Rupa
+                </div>
 
-               
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -218,8 +217,7 @@ export default function Hero() {
                     transition={{ delay: 0.8 }}
                     className="pl-4"
                   >
-                    name: <span className="text-green-500">"Sultana Rupa"</span>
-                    ,
+                    name: <span className="text-green-500">&quot;Sultana Rupa&quot;</span>,
                   </motion.div>
                   <motion.div
                     initial={{ opacity: 0 }}
@@ -229,7 +227,7 @@ export default function Hero() {
                   >
                     title:{" "}
                     <span className="text-green-500">
-                      "Full Stack Developer"
+                    &quot;Full Stack Developer&quot;
                     </span>
                     ,
                   </motion.div>
@@ -239,9 +237,13 @@ export default function Hero() {
                     transition={{ delay: 1.0 }}
                     className="pl-4"
                   >
-                    skills: [<span className="text-yellow-500">"Next.js"</span>,{" "}
-                    <span className="text-yellow-500">"React"</span>,{" "}
-                    <span className="text-yellow-500">"Node.js"</span>, ...],
+                    skills: [&nbsp;
+                    <span className="text-yellow-500">&quot;Next.js&quot;</span>
+                    ,&nbsp;
+                    <span className="text-yellow-500">&quot;React&quot;</span>
+                    ,&nbsp;
+                    <span className="text-yellow-500">&quot;Node.js&quot;</span>
+                    ,&nbsp;...],
                   </motion.div>
                   <motion.div
                     initial={{ opacity: 0 }}
@@ -267,7 +269,7 @@ export default function Hero() {
                   >
                     passion:{" "}
                     <span className="text-green-500">
-                      "Creating elegant solutions"
+                      &quot;Creating elegant solutions&quot;
                     </span>
                     ,
                   </motion.div>

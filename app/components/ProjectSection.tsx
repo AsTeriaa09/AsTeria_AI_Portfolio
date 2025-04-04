@@ -95,8 +95,7 @@ function ProjectItem({ project, index }: ProjectItemProps) {
     offset: ["start end", "end start"],
   })
 
-  const y = useTransform(scrollYProgress, [0, 1], [50, -50])
-  const opacity = useTransform(scrollYProgress, [0, 0.3, 0.6, 1], [0, 1, 1, 0])
+
 
   return (
     <motion.div
