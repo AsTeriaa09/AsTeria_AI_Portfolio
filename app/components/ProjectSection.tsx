@@ -7,13 +7,13 @@ import { ArrowUpRight } from "lucide-react"
 import SplitText from "@/components/split-text"
 import dash from "@/public/dash.png"
 import dash2 from "@/public/Dashboard.png"
-import dash3 from "@/public/dash3.jpg"
+import project3 from "@/public/project3.jpeg"
 
 const projects = [
   {
     id: 1,
     title: "NeoCampus",
-    description: "All-in-one student app providing campus services and information in real-time.",
+    description: "All-in-one student app providing campus services and information in real-time | Recognized as 4th place in the MIST NeoFetch Hackathon, NeoCampus serves as your essential campus companion.",
     image: dash,
     technologies: ["Next.js", "React", "MongoDB", "Socket.IO","AI Integration"],
     link: "https://github.com/AsTeriaa09/NeoCampus",
@@ -22,7 +22,7 @@ const projects = [
   {
     id: 2,
     title: "NeoHire",
-    description: "AI-powered platform to help job seekers improve their professional profiles.",
+    description: "NeoHire leverages AI to streamline recruitment by automating resume screening, offering unbiased candidate evaluations, and predicting career growth.",
     image: dash2,
     technologies: ["Next.js", "React", "MongoDB", "AI Integration"],
     link: "https://github.com/AsTeriaa09/NeoHire",
@@ -30,10 +30,10 @@ const projects = [
   },
   {
     id: 3,
-    title: "ChatterBox",
-    description: "Real-time communication platform for seamless messaging experience.",
-    image: dash3,
-    technologies: ["MongoDB","Node.js", "Express.js", "React", "Socket.IO"],
+    title: "MediCare",
+    description: " AI-powered healthcare platform revolutionizing medical system with features like disease detection, a smart symptom checker, and AI-driven prescription guidance. With multilingual support, emergency care access, and hospital management tools, it ensures accessible, personalized, and efficient healthcare for all.",
+    image: project3,
+    technologies: ["Next.js", "React", "MongoDB", "Socket.IO","AI Integration","Docker"],
     link: "https://github.com/AsTeriaa09/mern_socket_chat_app",
     color: "bg-[#EC4899]",
   },
@@ -136,7 +136,7 @@ function ProjectItem({ project, index }: ProjectItemProps) {
           </motion.h3>
 
           <motion.p
-            className="text-muted-foreground mb-4"
+            className="text-muted-foreground mb-4 max-w-2xl"
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -198,7 +198,7 @@ function ProjectItem({ project, index }: ProjectItemProps) {
           transition={{ duration: 0.5 }}
         >
           <motion.div
-            className="relative overflow-hidden rounded-lg h-48 md:h-72 md:w-88"
+            className="relative overflow-hidden rounded-lg h-48 md:h-72 w-full"
             whileHover={{ scale: 1.03 }}
             transition={{ type: "spring", stiffness: 300, damping: 10 }}
             onHoverStart={() => setIsHovered(true)}
