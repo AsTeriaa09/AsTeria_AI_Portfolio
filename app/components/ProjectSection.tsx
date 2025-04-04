@@ -8,6 +8,7 @@ import SplitText from "@/components/split-text"
 import dash from "@/public/dash.png"
 import dash2 from "@/public/Dashboard.png"
 import project3 from "@/public/project3.jpeg"
+import { StaticImageData } from 'next/image';
 
 const projects = [
   {
@@ -78,7 +79,7 @@ interface ProjectItemProps {
     id: number
     title: string
     description: string
-    image: string
+    image: StaticImageData | string;
     technologies: string[]
     link: string
     color: string
