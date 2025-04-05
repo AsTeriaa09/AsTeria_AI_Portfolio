@@ -14,7 +14,8 @@ const skills = [
       "JavaScript (ES6+)",
       "TypeScript",
       "React",
-      "MERN Stack",
+      "Node.js",
+      "Express.js",
       "Next.js",
       "HTML5",
       "CSS3",
@@ -32,9 +33,10 @@ const skills = [
     items: [
       "Bootstrap",
       "Tailwind CSS",
+      "Shadcn UI",
       "Framer Motion",
       "Materialize CSS",
-      "Responsive Web Design",
+      
       
     ],
   },
@@ -43,14 +45,13 @@ const skills = [
     icon: <Database className="h-5 w-5" />,
     items: [
       "MongoDB",
-      "Supabase",
       "MySQL",
       "PostgreSQL",
+      "Supabase",      
       "Langchain",
       "Docker",
       "Postman",
-      "Vercel",     
-      
+      "Vercel",           
       "Webpack",
       "npm",
       "Vector Database",
